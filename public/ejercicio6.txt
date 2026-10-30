@@ -1,0 +1,6 @@
+<?php
+ //EJERCICIO 6 
+ echo ini_get('max_execution_time')
+ //En este caso, pasados 600 segundos finalizaría la petición de manera automática
+ //El servidor necesita este límite para evitar que los scripts mal escritos saturen el servidor.
+ ?>
