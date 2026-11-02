@@ -84,6 +84,17 @@
          'SMR'  => new Ciclo(4, 'SMR', 'Sistemas Microinformáticos y Redes', Ciclo::GRADO_MEDIO),
      ];
  }
+
+ function exigirRol(string $rol): array
+ {
+     $usuario = exigirLogin();
+     if ($usuario['rol'] !== $rol) {
+         http_response_code(403);
+         exit('No tienes permiso para ver esta página.');
+     }
+
+     return $usuario;
+ }
  
 
 
